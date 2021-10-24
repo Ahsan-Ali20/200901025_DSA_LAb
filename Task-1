@@ -1,0 +1,18 @@
+# Task1
+print('========================================================')
+print('========================TASK : 1========================')
+stra=input('ENTER A STRING TO CHECK WHETHER IT IS PALINDROME OR NOT : ')
+strb=""
+emp_stack=[]
+for j in string:
+ emp_stack.append(j)
+while len(emp_stack)!=0:
+ strb=strb+emp_stack.pop()
+if(strb==stra):
+  print('========================================================')
+  print('Yes, It is Palindrome!!')
+  print('========================================================')
+else:
+  print('========================================================')
+  print('No, It is not a Palindrome!!')
+  print('========================================================')
