@@ -1,0 +1,28 @@
+print('========================================================')
+print('========================TASK : 2========================')
+P=input('Input Parenthesis : ')
+def Compare(Brac_open,Brac_close):
+    if Brac_open=='[' and Brac_close==']'or Brac_open=='{' and Brac_close=='}' or Brac_open=='(' and Brac_close==')':
+      return True
+    return False
+
+def Balanced_Parenthesis(P):
+    emp_stack=[]
+    for j in range(len(P)):
+        if P[j]=='[' or P[j]=='{' or P[j]=='(':
+            emp_stack.append(P[j])
+        elif P[j] == ']' or P[j] == '}' or P[j] == ')':
+            if Compare(emp_stack[-1],P[j]):
+                emp_stack.pop()
+            else:
+               return False
+    if len(emp_stack)==0:
+      print('========================================================')
+      print("Balanced Parenthesis")
+      print('========================================================')
+    else:
+      print('========================================================')
+      print("Unbalanced Parenthesis")
+      print('========================================================')
+
+print(Balanced_Parenthesis(P))
